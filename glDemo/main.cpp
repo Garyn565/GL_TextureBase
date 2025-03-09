@@ -11,8 +11,8 @@ GLuint playerTexture;
 
 
 // Window size
-const unsigned int initWidth = 512;
-const unsigned int initHeight = 512;
+const unsigned int initWidth = 1080;
+const unsigned int initHeight = 1080;
 
 // Function prototypes
 void renderScene();
@@ -70,7 +70,7 @@ int main() {
 	//
 
 	// Load image file from disk
-	auto textureImageFile = string("Assets\\Textures\\player1_ship.png");
+	auto textureImageFile = string("Assets\\Textures\\TopDownHolyDuck.png");
 	FIBITMAP* bitmap = FreeImage_Load(FIF_PNG, textureImageFile.c_str(), BMP_DEFAULT);
 
 	if (bitmap) {
@@ -148,16 +148,16 @@ void renderScene()
 	glBegin(GL_QUADS);
 
 	glTexCoord2f(0.0f, 1.0f);
-	glVertex2f(-0.5f, 0.5f);
+	glVertex2f(-0.5f, 0.5f);	//rotates kinda
 
 	glTexCoord2f(1.0f, 1.0f);
-	glVertex2f(0.5f, 0.5f);
+	glVertex2f(0.5f, 0.5f);		//rotates kinda
 
 	glTexCoord2f(1.0f, 0.0f);
-	glVertex2f(0.5f, -0.5f);
+	glVertex2f(0.5f, -0.5f);	//rotates kinda
 
 	glTexCoord2f(0.0f, 0.0f);
-	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(-0.5f, -0.5f);	//rotates kinda
 
 	glEnd();
 
